@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "TimelyApp",
+    "slug": "timelyapp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "timelyapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#4F7CAC"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jordanking.timelyapp",
+      "infoPlist": {
+        "NSMotionUsageDescription": "TimelyApp uses motion data to track your step count and encourage movement breaks during focus sessions.",
+        "NSHealthShareUsageDescription": "TimelyApp reads your activity data to provide movement reminders."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#4F7CAC"
+      },
+      "package": "com.jordanking.timelyapp",
+      "permissions": [
+        "android.permission.ACTIVITY_RECOGNITION"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      [
+        "expo-sensors",
+        {
+          "motionPermission": "Allow TimelyApp to access motion sensors to count your steps."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
